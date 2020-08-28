@@ -1,0 +1,58 @@
+<% wrap_layout :inner do %>
+  <% content_for :sidebar do %>
+    <div class="docs-sidebar hidden-print affix-top" role="complementary">
+      <ul class="nav docs-sidenav">
+        <li<%= sidebar_current("docs-home") %>>
+          <a href="/docs/providers/index.html">All Providers</a>
+        </li>
+
+        <li<%= sidebar_current("docs-insightops-index") %>>
+          <a href="/docs/providers/insightops/index.html">InsightOps Provider</a>
+          <ul class="nav nav-visible">
+            <li<%= sidebar_current("docs-insightops-guide-getting-started") %>>
+              <a href="/docs/providers/insightops/guides/getting-started.html">Getting Started</a>
+            </li>
+          </ul>
+        </li>
+
+        <li<%= sidebar_current("docs-insightops-data-source") %>>
+          <a href="#">Data Sources</a>
+          <ul class="nav nav-visible">
+            <li<%= sidebar_current("docs-insightops-data-source-label") %>>
+              <a href="/docs/providers/insightops/d/label.html">insightops_label</a>
+            </li>
+            <li<%= sidebar_current("docs-insightops-data-source-logset") %>>
+              <a href="/docs/providers/insightops/d/logset.html">insightops_logset</a>
+            </li>
+          </ul>
+        </li>
+
+        <li<%= sidebar_current("docs-insightops-resource") %>>
+          <a href="#">Resources</a>
+          <ul class="nav nav-visible">
+            <li<%= sidebar_current("docs-insightops-resource-insightops-action") %>>
+              <a href="/docs/providers/insightops/r/action.html">insightops_action</a>
+            </li>
+            <li<%= sidebar_current("docs-insightops-resource-label") %>>
+              <a href="/docs/providers/insightops/r/label.html">insightops_label</a>
+            </li>
+            <li<%= sidebar_current("docs-insightops-resource-log") %>>
+              <a href="/docs/providers/insightops/r/log.html">insightops_log</a>
+            </li>
+            <li<%= sidebar_current("docs-insightops-resource-logset") %>>
+              <a href="/docs/providers/insightops/r/logset.html">insightops_logset</a>
+            </li>
+            <li<%= sidebar_current("docs-insightops-resource-tag") %>>
+              <a href="/docs/providers/insightops/r/tag.html">insightops_tag</a>
+            </li>
+            <li<%= sidebar_current("docs-insightops-resource-target") %>>
+              <a href="/docs/providers/insightops/r/target.html">insightops_target</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= yield %>
+<% end %>
