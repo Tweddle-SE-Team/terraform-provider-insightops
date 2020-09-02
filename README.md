@@ -14,30 +14,30 @@ Requirements
 Building The Provider
 ---------------------
 
-Clone repository to: `$GOPATH/src/github.com/dikhan/terraform-provider-insightops`
+Clone repository to: `$GOPATH/src/github.com/Tweddle-SE-Team/terraform-provider-insightops`
 
 ```sh
-$ go get github.com/dikhan/terraform-provider-insightops
+$ go get github.com/Tweddle-SE-Team/terraform-provider-insightops
 ```
 
 Enter the provider directory and build the provider
 
 ```sh
-$ cd $GOPATH/src/github.com/dikhan/terraform-provider-insightops
+$ cd $GOPATH/src/github.com/Tweddle-SE-Team/terraform-provider-insightops
 $ go build
 ```
 
 Using the provider
 ------------------
 
-Refer to the READMEs inside the [examples](https://github.com/AndrewChubatiuk/terraform-provider-insightops/examples) folder to
+Refer to the READMEs inside the [examples](https://github.com/Tweddle-SE-Team/terraform-provider-insightops/examples) folder to
 see how to configure each resource provided by this terraform provider.
 
 Developing the Provider
 -----------------------
 
 To compile the provider, run `go build`. This will build the provider and put the provider binary in the current
-`$GOPATH/src/github.com/dikhan/terraform-provider-insightops` directory.
+`$GOPATH/src/github.com/Tweddle-SE-Team/terraform-provider-insightops` directory.
 
 ```sh
 $ go build
@@ -55,7 +55,7 @@ Expected output:
 
 ```
 $ TF_ACC=1 INSIGHTOPS_API_KEY="<API_KEY>" go test $(go list ./...) -timeout 120m -v
-?       github.com/dikhan/terraform-provider-insightops [no test files]
+?       github.com/Tweddle-SE-Team/terraform-provider-insightops [no test files]
 === RUN   TestInsightOpsProvider
 --- PASS: TestInsightOpsProvider (0.00s)
 === RUN   TestAccInsightOpsLog_Create
@@ -71,14 +71,14 @@ $ TF_ACC=1 INSIGHTOPS_API_KEY="<API_KEY>" go test $(go list ./...) -timeout 120m
 === RUN   TestAccInsightOpsTags_Update
 --- PASS: TestAccInsightOpsTags_Update (19.71s)
 PASS
-ok      github.com/AndrewChubatiuk/terraform-provider-insightops/insightops      55.636s
+ok      github.com/Tweddle-SE-Team/terraform-provider-insightops/insightops      55.636s
 
 ```
 
 Or specific tests can also be executed as follows:
 
 ```sh
-$ TF_ACC=1 INSIGHTOPS_API_KEY="<API_KEY>" INSIGHTOPS_REGION="<REGION>" go test github.com/dikhan/terraform-provider-insightops/insightops -run  ^TestAccInsightOpsTags_Create$ -timeout 120m -v
+$ TF_ACC=1 INSIGHTOPS_API_KEY="<API_KEY>" INSIGHTOPS_REGION="<REGION>" go test github.com/Tweddle-SE-Team/terraform-provider-insightops/insightops -run  ^TestAccInsightOpsTags_Create$ -timeout 120m -v
 ```
 
 The acceptance tests require a INSIGHTOPS_API_KEY and INSIGHTOPS_REGION to be set. These env variables value will be used within the tests to
@@ -97,5 +97,5 @@ Authors
 
 Daniel I. Khan Ramiro
 
-See also the list of [contributors](https://github.com/AndrewChubatiuk/terraform-provider-insightops/graphs/contributors) who
+See also the list of [contributors](https://github.com/Tweddle-SE-Team/terraform-provider-insightops/graphs/contributors) who
 participated in this project.

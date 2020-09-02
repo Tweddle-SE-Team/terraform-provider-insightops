@@ -1,7 +1,7 @@
 package provider
 
 import (
-	"github.com/AndrewChubatiuk/terraform-provider-insightops/insightops"
+	"github.com/Tweddle-SE-Team/terraform-provider-insightops/insightops"
 	"github.com/hashicorp/terraform/helper/schema"
 	"github.com/hashicorp/terraform/terraform"
 )

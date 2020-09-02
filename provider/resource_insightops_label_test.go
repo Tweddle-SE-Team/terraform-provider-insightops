@@ -2,7 +2,7 @@ package provider
 
 import (
 	"fmt"
-	"github.com/AndrewChubatiuk/terraform-provider-insightops/insightops"
+	"github.com/Tweddle-SE-Team/terraform-provider-insightops/insightops"
 	"github.com/hashicorp/terraform/helper/resource"
 	"github.com/hashicorp/terraform/terraform"
 	"strings"

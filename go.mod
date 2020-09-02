@@ -1,4 +1,4 @@
-module github.com/AndrewChubatiuk/terraform-provider-insightops
+module github.com/Tweddle-SE-Team/terraform-provider-insightops
 
 go 1.14
 
