@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/AndrewChubatiuk/terraform-provider-insightops/provider"
+	"github.com/Tweddle-SE-Team/terraform-provider-insightops/provider"
 	"github.com/hashicorp/terraform/plugin"
 )
 
