@@ -32,6 +32,7 @@ func Provider() terraform.ResourceProvider {
 		},
 		DataSourcesMap: map[string]*schema.Resource{
 			"insightops_label":  dataSourceInsightOpsLabel(),
+			"insightops_log":    dataSourceInsightOpsLog(),
 			"insightops_logset": dataSourceInsightOpsLogset(),
 		},
 		ResourcesMap: map[string]*schema.Resource{
