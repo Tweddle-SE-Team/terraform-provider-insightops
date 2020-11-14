@@ -66,26 +66,26 @@ func (client *InsightOpsClient) GetLog(logId string) (*Log, error) {
 	return logRequest.Log, nil
 }
 
-func (client *InsightOpsClient) GetLogToken(logsetName, logName string) (string, error) {
+func (client *InsightOpsClient) GetLogToken(logsetName, logName string) (string, string, error) {
 	logset, err := client.GetLogsetByName(logsetName)
 	if err != nil {
-		return "", err
+		return "", "", err
 	}
 
 	for _, logInfo := range logset.LogsInfo {
 		if logInfo.Name == logName {
 			log, err := client.GetLog(logInfo.Id)
 			if err != nil {
-				return "", err
+				return "", "", err
 			}
 			if len(log.Tokens) > 0 {
-				return log.Tokens[0], nil
+				return log.Tokens[0], logInfo.Id, nil
 			} else {
-				return "", fmt.Errorf("No tokens for log %s found", logInfo.Name)
+				return "", "", fmt.Errorf("No tokens for log %s found", logInfo.Name)
 			}
 		}
 	}
-	return "", fmt.Errorf("No tokens found for logset %s", logsetName)
+	return "", "", fmt.Errorf("No tokens found for logset %s", logsetName)
 }
 
 // PostTag creates a new Log
